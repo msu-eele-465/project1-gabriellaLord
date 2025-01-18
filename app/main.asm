@@ -68,15 +68,17 @@ blinkRed:
 ;-------------------------------------------------------------------------------
 ; Delay loop
 ;-------------------------------------------------------------------------------
-delay       mov.w   #088F6h,R15              ; Delay to R15
-L1          dec.w   R15                     ; Decrement R15
-            jnz     L1                      ; Delay over?
+delay
+    mov.w   #088F6h,R15              ; Delay to R15
+L1
+    dec.w   R15                     ; Decrement R15
+    jnz     L1                      ; Delay over?
             
-            dec.w   R14
-            jnz     delay
+    dec.w   R14
+    jnz     delay
 
-            jmp     main                    ; Again
-            NOP
+    jmp     main                    ; Again
+    NOP
 
 ;--End Delay-----------------------------------------------------------------------------
 
