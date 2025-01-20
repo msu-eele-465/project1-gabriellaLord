@@ -55,7 +55,7 @@ init:
     mov.w   #00000h, R14
     mov.w   #00000h, R15
 
-	;-- Setup Timer B0 to overflow every 1 second
+	;-- Setup Timer B0 to compare every 1 second
 	bis.w	#TBCLR, &TB0CTL					; Clear timers & dividers
 	bis.w	#TBSSEL__ACLK, &TB0CTL			; Select ACLK (32768 Hz) as timer source
 	mov.w	#0803h, &TB0CCR0				; Set timer compare value
